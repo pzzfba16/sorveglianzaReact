@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import Menu from "./Menu";
 
+import { menuItems } from "./menuItems";
+
 const AppNavbar = () => {
   return (
     <Navbar bg="light" expand="lg" fixed="top">
@@ -10,7 +12,9 @@ const AppNavbar = () => {
         <Navbar.Toggle aria-controls="uds-navbar-nav" />
         <Navbar.Collapse id="uds-navbar-nav">
           <Nav className="me-auto">
-            <Menu />
+            {menuItems.map((menu, index) => {
+              return <Menu item={menu} key={index} />;
+            })}
           </Nav>
         </Navbar.Collapse>
       </Container>
