@@ -1,14 +1,15 @@
 import React from "react";
+import { NavDropdown } from "react-bootstrap";
 
-const Dropdown = ({ submenus }) => {
+const Dropdown = ({ subItems }) => {
   return (
-    <ul className="dropdown">
-      {submenus.map((submenu, index) => (
-        <li key={index} className="menu-items">
-          <a href={submenu.url}>{submenu.title}</a>
-        </li>
-      ))}
-    </ul>
+    <NavDropdown title={subItems.title}>
+      {subItems.submenu.map((menu, index) => {
+        return (
+          <NavDropdown.Item href={menu.url}>{menu.title}</NavDropdown.Item>
+        );
+      })}
+    </NavDropdown>
   );
 };
 

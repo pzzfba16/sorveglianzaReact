@@ -13,7 +13,7 @@ const AppNavbar = () => {
         <Navbar.Collapse id="uds-navbar-nav">
           <Nav className="me-auto">
             {menuItems.map((menu, index) => {
-              return <Menu item={menu} key={index} />;
+              return <Menu items={menu} key={index} />;
             })}
           </Nav>
         </Navbar.Collapse>

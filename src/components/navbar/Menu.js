@@ -1,13 +1,13 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
+import { Nav, NavDropdown } from "react-bootstrap";
 
 import Dropdown from "./Dropdown";
 
-const Menu = ({ item }) => {
-  if (item.submenu) {
-    return <Dropdown submenus={item.submenu} />;
+const Menu = ({ items }) => {
+  if (items.submenu) {
+    return <Dropdown subItems={items} />;
   } else {
-    return <Nav.Link href={item.url}>{item.title}</Nav.Link>;
+    return <Nav.Link href={items.url}>{items.title}</Nav.Link>;
   }
 };
 
