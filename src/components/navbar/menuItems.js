@@ -19,11 +19,31 @@ export const menuItems = [
   },
   {
     title: "TdS",
-    url: "/tds"
+    url: "/tds",
+    submenu: [
+      {
+        title: "Fascicoli",
+        url: "/uds"
+      },
+      {
+        title: "Nuovo fascicolo",
+        url: "/udsForm"
+      }
+    ]
   },
   {
     title: "Impostazioni",
-    url: "/impostazioni"
+    url: "/impostazioni",
+    submenu: [
+      {
+        title: "Avvocati",
+        url: "/avvocati"
+      },
+      {
+        title: "Posizione Giuridica",
+        url: "/posizionegiuridica"
+      }
+    ]
   },
   {
     title: "Email",
